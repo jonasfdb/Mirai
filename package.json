@@ -1,0 +1,23 @@
+{
+  "name": "mirai",
+  "version": "0.0.1",
+  "description": "A fun little AI chatbot to talk to through Discord.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node --env-file=.env --import tsx src/index.ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "author": "jonasfdb",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "discord.js": "^14.24.0",
+    "dotenv": "^16.4.5",
+    "keyv": "^4.5.4",
+    "@keyv/sqlite": "^3.6.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
