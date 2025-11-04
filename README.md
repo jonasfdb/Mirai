@@ -14,7 +14,7 @@ If you have an idea, a suggestion or a feature request, you can make your voice 
 
 ### Prerequisites
 
-You should have a Discord bot token available through your [Discord Developer Portal](https://discord.com/developers), and have [Node.js](https://nodejs.org) >22 and [PostgreSQL](https://www.postgresql.org/) >17.5 installed. This version of Mirai was built and is running on Node.js 22.21.0 and Keyv/SQLite 3.6.7, using discord.js 14.24.2.
+You should have a Discord bot token available through your [Discord Developer Portal](https://discord.com/developers), and have [Node.js](https://nodejs.org) >22 installed. This version of Mirai was built and is running on Node.js 22.21.0 and Keyv/SQLite 3.6.7, using discord.js 14.24.2.
 
 ### Installation and Setup
 
