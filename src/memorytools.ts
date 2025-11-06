@@ -31,7 +31,7 @@ async function integrateMemory(existing: string, newFact: string, scopeLabel: 'u
   const system = `You maintain concise ${scopeLabel} memory for a Discord AI.
 - Input: A string beginning with either INSTRUCTION or MEMORY. If MEMORY, add the memory to file. If INSTRUCTION, execute it.
 - Output: a revised memory in markdown bullets.
-- Each line starts with an ISO date in parentheses, e.g. (2025-11-06).
+- Each line starts with an ISO date in parentheses.
 - Merge duplicates. Remove stale/contradictory info. Prefer stable facts.
 - Be terse. No preamble, no code fences. No headings. Only bullets.
 - Stay under ${MAX_LEN} characters total.`;
