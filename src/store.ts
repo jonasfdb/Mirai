@@ -17,7 +17,7 @@ const MAX_TOTAL_CHARS = 11500;
 export async function getHistory(userId: string): Promise<ChatHistory> {
   const baseSystem: ChatMessage = {
     role: 'system',
-    content: readFileSync('./config/sysmsg.md', 'utf-8')
+    content: readFileSync('./memories/core/sysmsg.md', 'utf-8')
   };
 
   const hist = (await kv.get(userId)) ?? [baseSystem];
