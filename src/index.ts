@@ -134,6 +134,7 @@ function startFollowupCollector(contextMsg: Message) {
 client.on(Events.MessageCreate, async (msg: Message) => {
   try {
     if (msg.author.bot) return;
+    if (activeCollectors.has(`${msg.channel.id}:${msg.author.id}`)) return;
 
     // In DMs, always respond. In guilds, require a mention *unless* it’s captured by a follow-up collector.
     const mentioned = msg.inGuild()
