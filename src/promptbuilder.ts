@@ -2,7 +2,7 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 
 const MEM_ROOT = process.env.MEMORIES_DIR || './memories';
-const CORE_PATH = path.join('prompts', 'core', 'sysmsg.md'); // your chosen location
+const CORE_PATH = path.join(MEM_ROOT, 'core', 'sysmsg.md'); // your chosen location
 const USERS_DIR = path.join(MEM_ROOT, 'users');
 const SERVERS_DIR = path.join(MEM_ROOT, 'guilds');
 

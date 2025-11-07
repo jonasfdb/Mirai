@@ -112,6 +112,11 @@ function startFollowupCollector(contextMsg: Message) {
     // Once we got the next message, clear from registry
     activeCollectors.delete(key);
     try {
+
+      if (m.content.startsWith('.')) {
+        m.reply({ content: '(Mirai has stopped listening to your messages.)'})
+        return;
+      }
       // Process without requiring a mention—just the raw content
       const content = (m.content ?? '').trim();
       if (content.length === 0) return;
