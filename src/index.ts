@@ -137,7 +137,7 @@ client.on(Events.MessageCreate, async (msg: Message) => {
 
     // In DMs, always respond. In guilds, require a mention *unless* it’s captured by a follow-up collector.
     const mentioned = msg.inGuild()
-      ? msg.mentions.has(client.user?.id || '', { ignoreDirect: false, ignoreRepliedUser: false })
+      ? msg.mentions.has(client.user?.id || '', { ignoreEveryone: true, ignoreDirect: false, ignoreRepliedUser: false })
       : true;
 
     if (!mentioned) return;
